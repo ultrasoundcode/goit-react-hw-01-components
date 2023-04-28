@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 export const Table = styled.table`
-  width: 500px;
+  width: 350px;
   margin: 0 auto;
+  transition: transform 500ms;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.05);
+  }
 `;
 export const TableHead = styled.thead`
   height: 50px;
