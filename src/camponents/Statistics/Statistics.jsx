@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
-import styles from './Statistics.module.css';
+import {
+  StatisticsSection,
+  StatisticsTitle,
+  StatisticsList,
+  StaticticsItem,
+} from './Statistics.styled';
 function generateRandomColor() {
   const hexValues = '0123456789ABCDEF';
   let color = '#';
@@ -10,25 +15,22 @@ function generateRandomColor() {
 
   return color;
 }
-
 function Statistics({ stats }) {
   return (
-    <section className={styles.section}>
-      <h2 className={styles.title}>Upload stats</h2>
-
-      <ul className={styles.list}>
+    <StatisticsSection>
+      <StatisticsTitle>Upload stats</StatisticsTitle>
+      <StatisticsList>
         {stats.map(({ id, label, percentage }) => (
-          <li
+          <StaticticsItem
             key={id}
-            className={styles.item}
             style={{ backgroundColor: generateRandomColor() }}
           >
-            <span className={styles.label}>{label}</span>
-            <span className={styles.percentage}>{percentage}%</span>
-          </li>
+            <span>{label}</span>
+            <span>{percentage}%</span>
+          </StaticticsItem>
         ))}
-      </ul>
-    </section>
+      </StatisticsList>
+    </StatisticsSection>
   );
 }
 Statistics.propTypes = {
@@ -38,7 +40,7 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     }).isRequired
-  ).isRequired,
+  ),
 };
 
 export default Statistics;

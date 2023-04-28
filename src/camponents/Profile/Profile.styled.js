@@ -1,4 +1,5 @@
-.profile {
+import styled from 'styled-components';
+export const ProfileWrap = styled.div`
   background-color: rgb(172, 192, 229);
   margin-top: 20px;
   width: 350px;
@@ -8,50 +9,51 @@
   margin-right: auto;
   transition: transform 500ms;
   cursor: pointer;
-}
-.profile:hover {
-  transform: scale(1.05);
-}
-
-.description {
+  :hover {
+    transform: scale(1.05);
+  }
+`;
+export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 30px;
   background-color: #fff;
-}
-.avatar {
+`;
+export const Image = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin: 0 auto;
-}
-.name {
+`;
+export const Name = styled.span`
   font-size: 18px;
   font-family: SF Mono, sans-serif;
   font-weight: 700;
   margin-top: 20px;
   color: #212121;
-}
-.tag {
+`;
+export const Tag = styled.span`
   font-family: SF Mono, sans-serif;
   font-size: 18px;
   margin-top: 10px;
   color: rgb(131, 129, 129);
-}
-.location {
+`;
+export const Location = styled.span`
   font-family: SF Mono, sans-serif;
   font-size: 18px;
   margin-top: 10px;
   color: rgb(131, 129, 129);
-}
-.stats {
+`;
+export const List = styled.ul`
   font-family: SF Mono, sans-serif;
   background-color: #f3f6f9;
   border-top: 1px solid #dfe1e3;
   display: flex;
   list-style-type: none;
   padding: 0;
-}
-.stats_item {
+`;
+export const ListItem = styled.li`
   border-right: 1px solid #dfe1e3;
   display: flex;
   flex-direction: column;
@@ -59,14 +61,15 @@
   text-align: center;
   width: calc(100% / 3);
   padding: 15px 0;
-}
-.label {
+`;
+export const Label = styled.span`
   color: rgb(131, 129, 129);
   font-size: 15px;
-}
-.quantity {
+`;
+
+export const Quantity = styled.span`
   font-family: SF Mono, sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #212121;
-}
+`;
