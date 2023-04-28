@@ -8,4 +8,9 @@ export const Friends = styled.ul`
   flex-direction: column;
   padding: 0;
   margin-top: 30px;
+  transition: transform 500ms;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.05);
+  }
 `;
