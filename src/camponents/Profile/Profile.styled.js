@@ -1,29 +1,25 @@
 import styled from 'styled-components';
 export const ProfileWrap = styled.div`
-  background-color: rgb(172, 192, 229);
+  background-color: ${p => p.theme.colors.accent};
   margin-top: 20px;
   width: 350px;
-  border-radius: 5px;
-  padding: 10px 10px;
+  border-radius: ${p => p.theme.radius.lg};
+  padding: ${p => p.theme.radius.lg};
   margin-left: auto;
   margin-right: auto;
-  transition: transform 500ms;
-  cursor: pointer;
-  :hover {
-    transform: scale(1.05);
-  }
 `;
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 30px;
-  background-color: #fff;
+  background-color: ${p => p.theme.colors.white};
 `;
 export const Image = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: 2px solid ${p => p.theme.colors.accent};
   margin: 0 auto;
 `;
 export const Name = styled.span`
@@ -31,7 +27,7 @@ export const Name = styled.span`
   font-family: SF Mono, sans-serif;
   font-weight: 700;
   margin-top: 20px;
-  color: #212121;
+  color: ${p => p.theme.colors.black};
 `;
 export const Tag = styled.span`
   font-family: SF Mono, sans-serif;
@@ -57,7 +53,7 @@ export const ListItem = styled.li`
   border-right: 1px solid #dfe1e3;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: ${p => p.theme.radius.lg};
   text-align: center;
   width: calc(100% / 3);
   padding: 15px 0;
@@ -71,5 +67,5 @@ export const Quantity = styled.span`
   font-family: SF Mono, sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #212121;
+  color: ${p => p.theme.colors.black};
 `;
