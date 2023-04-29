@@ -2,21 +2,17 @@ import styled from 'styled-components';
 
 export const StatisticsSection = styled.section`
   width: 350px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: ${p => p.theme.radius.lg};
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(159, 178, 213);
-  transition: transform 500ms;
+  background-color: ${p => p.theme.colors.accent};
   cursor: pointer;
-  :hover {
-    transform: scale(1.05);
-  }
 `;
 export const StatisticsTitle = styled.h2`
   text-align: center;
-  background-color: #fff;
+  background-color: ${p => p.theme.colors.white};
   color: rgb(131, 129, 129);
   font-family: SF Mono, sans-serif;
   text-transform: uppercase;

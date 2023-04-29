@@ -7,8 +7,8 @@ import {
 function FriendListItem({ friend: { avatar, name, isOnline } }) {
   return (
     <ListOfFriends>
-      <StatusOfFriends status={isOnline}></StatusOfFriends>
-      <ImgOfFriends src={avatar} alt='User avatar' width='48' />
+      <StatusOfFriends status={isOnline === true}></StatusOfFriends>
+      <ImgOfFriends src={avatar} alt="User avatar" width="48" />
       <NameOFFriends>{name}</NameOFFriends>
     </ListOfFriends>
   );

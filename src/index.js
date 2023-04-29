@@ -5,13 +5,13 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
   colors: {
     black: '#212121',
-    white: '#fffff',
+    white: '#ffff',
     accent: 'rgb(172, 192, 229)',
   },
   radius: {
     sm: '2px',
-    md: '4px',
-    lg: '6px',
+    md: '3px',
+    lg: '5px',
   },
 };
 
