@@ -1,39 +1,27 @@
 import PropTypes from 'prop-types';
-import {
-  StatisticsSection,
-  StatisticsTitle,
-  StatisticsList,
-  StaticticsItem,
-} from './Statistics.styled';
-function generateRandomColor() {
-  const hexValues = '0123456789ABCDEF';
-  let color = '#';
+import GenerateRandomColors from '../Utils/GenerateRandomColors';
+import { Section, Title, List, ListItem } from './Statistics.styled';
 
-  for (let i = 0; i < 6; i++) {
-    color += hexValues[Math.floor(Math.random() * 16)];
-  }
-
-  return color;
-}
-function Statistics({ stats }) {
+function Statistics({ title, stats }) {
   return (
-    <StatisticsSection>
-      <StatisticsTitle>Upload stats</StatisticsTitle>
-      <StatisticsList>
+    <Section>
+      {title && <Title>{title}</Title>}
+      <List>
         {stats.map(({ id, label, percentage }) => (
-          <StaticticsItem
+          <ListItem
             key={id}
-            style={{ backgroundColor: generateRandomColor() }}
+            style={{ backgroundColor: GenerateRandomColors() }}
           >
             <span>{label}</span>
             <span>{percentage}%</span>
-          </StaticticsItem>
+          </ListItem>
         ))}
-      </StatisticsList>
-    </StatisticsSection>
+      </List>
+    </Section>
   );
 }
 Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

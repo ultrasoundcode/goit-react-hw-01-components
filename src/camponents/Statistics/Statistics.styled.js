@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StatisticsSection = styled.section`
+export const Section = styled.section`
   width: 350px;
   padding: 5px;
   border-radius: ${p => p.theme.radius.lg};
@@ -10,7 +10,7 @@ export const StatisticsSection = styled.section`
   background-color: ${p => p.theme.colors.accent};
   cursor: pointer;
 `;
-export const StatisticsTitle = styled.h2`
+export const Title = styled.h2`
   text-align: center;
   background-color: ${p => p.theme.colors.white};
   color: rgb(131, 129, 129);
@@ -20,13 +20,13 @@ export const StatisticsTitle = styled.h2`
   padding: 15px;
   margin: 0;
 `;
-export const StatisticsList = styled.ul`
+export const List = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
 `;
-export const StaticticsItem = styled.li`
+export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   text-align: center;

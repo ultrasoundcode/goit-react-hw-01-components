@@ -1,16 +1,11 @@
-import {
-  ListOfFriends,
-  ImgOfFriends,
-  NameOFFriends,
-  StatusOfFriends,
-} from './FriendsListItem.styled';
+import { List, Img, Name, Status } from './FriendsListItem.styled';
 function FriendListItem({ friend: { avatar, name, isOnline } }) {
   return (
-    <ListOfFriends>
-      <StatusOfFriends status={isOnline === true}></StatusOfFriends>
-      <ImgOfFriends src={avatar} alt="User avatar" width="48" />
-      <NameOFFriends>{name}</NameOFFriends>
-    </ListOfFriends>
+    <List>
+      <Status status={isOnline}></Status>
+      <Img src={avatar} alt="User avatar" width="48" />
+      <Name>{name}</Name>
+    </List>
   );
 }
 
